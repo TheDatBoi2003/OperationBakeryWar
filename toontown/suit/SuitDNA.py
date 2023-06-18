@@ -6,7 +6,23 @@ import random
 from direct.distributed.PyDatagram import PyDatagram
 from direct.distributed.PyDatagramIterator import PyDatagramIterator
 from otp.avatar import AvatarDNA
+import SuitDepartmentInfinstucture
 notify = directNotify.newCategory('SuitDNA')
+
+cogs_sales = SuitDepartmentInfinstucture.SuitDepartmentSales()
+cogs_money = SuitDepartmentInfinstucture.SuitDepartmentMoney()
+cogs_legal = SuitDepartmentInfinstucture.SuitDepartmentLegal()
+cogs_corp = SuitDepartmentInfinstucture.SuitDepartmentCorp()
+cogs_tech = SuitDepartmentInfinstucture.SuitDepartmentTechnical()
+
+COGS_INC_DEPARTMENTS = [
+    cogs_sales,
+    cogs_money,
+    cogs_legal,
+    cogs_corp,
+    cogs_tech
+]
+
 suitHeadTypes = ['f',
  'p',
  'ym',
